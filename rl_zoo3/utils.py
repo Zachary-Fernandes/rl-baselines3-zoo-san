@@ -30,6 +30,7 @@ ALGOS: Dict[str, Type[BaseAlgorithm]] = {
     "ddpg": DDPG,
     "dqn": DQN,
     "ppo": PPO,
+    "ppo-san": PPO,
     "sac": SAC,
     "td3": TD3,
     # SB3 Contrib,
