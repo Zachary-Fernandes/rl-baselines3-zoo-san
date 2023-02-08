@@ -39,10 +39,3 @@ class ExtractorSAN(BaseFeaturesExtractor):
 
     def forward(self, observations: th.Tensor) -> th.Tensor:
         return self.linear(self.cnn(observations))
-
-policy_kwargs = dict(
-    features_extractor_class=ExtractorSAN,
-    features_extractor_kwargs=dict(features_dim=128),
-)
-model = PPO("CnnPolicy", "BreakoutNoFrameskip-v4", policy_kwargs=policy_kwargs, verbose=1)
-model.learn(4e7)
