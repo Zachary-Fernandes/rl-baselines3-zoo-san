@@ -22,6 +22,9 @@ from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv, VecEnv,
 # For custom activation fn
 from torch import nn as nn  # noqa: F401 pylint: disable=unused-import
 
+# Importing ppo-san
+from .custom.san import *
+
 ALGOS: Dict[str, Type[BaseAlgorithm]] = {
     "a2c": A2C,
     "ddpg": DDPG,
